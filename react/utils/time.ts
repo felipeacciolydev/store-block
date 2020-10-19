@@ -35,3 +35,9 @@ export const tick = (targetDate: string, dispatchFn: React.Dispatch<React.SetSta
     dispatchFn(parseTimeRemaining(secondsLeft))
   }, ONE_SECOND_IN_MILLIS)
 }
+
+export const getTwoDaysFromNow = () => {
+  const today = new Date()
+  today.setDate(today.getDate())
+  return today.toISOString()
+}
